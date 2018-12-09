@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    margin: 0;
+    /* NY */
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    background-size: 600% 600%;
+
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    /* PARALLAXING EFFECT */
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+/* LOGO / MENU / SEARCH */
+.top {
+    width: 100%;
+    height: 120px;
+    /* NY - fra 100px til 120px */
+    /* border: 1px solid red; */
+}
+
+.logo {
+    margin: 20px 25px;
+    /* NY - økt margin l og r fra 20px til 25px*/
+    position: absolute;
+    z-index: 1000;
+}
+
+.logo img {
+    width: auto;
+    height: 92px;
+}
+
+.search {
+    margin: 20px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+
+.search img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Change logo size */
+@media screen and (max-width:768px) {
+    .logo img {
+        width: auto;
+        height: 62px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .logo img {
+        width: auto;
+        height: 82px;
+    }
+}
+
+/* menu */
+.tag {
+    margin: 0 auto;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    position: relative;
+    top: 50px;
+}
+
+.tag a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Change menu position */
+@media screen and (max-width:375px) {
+    .tag {
+        top: 150px;
+    }
+}
+
+/* Menubuttons (html, css, js) */
+.btn {
+    height: 30px;
+    padding: 0;
+    margin: 20px;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+
+.btn.h {
+    width: 60px;
+    border-bottom-color: #ed612c;
+}
+
+.btn.c {
+    width: 45px;
+    border-bottom-color: #00adf6;
+}
+
+.btn.j {
+    width: 100px;
+    border-bottom-color: #f0b24b;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* PARALLAXING */
+/* h2 heading */
+.parallax_container {
+    max-width: 1000px;
+    margin: 75px auto;
+    text-align: center;
+}
+
+/* top image */
+.parallax_container > h1 {
+    font-size: 40px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* heading */
+h1 {
+    font-family: inconsolata;
+    font-size: 30px;
+    text-align: left;
+}
+
+/* marks what tag it belongs to */
+#heading_marker {
+    color: #00adf6;
+}
+
+p {
+    max-width: 600px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.parallax_right {
+    margin-left: 20%;
+}
+
+.parallax_right p {
+    margin-top: -250px;
+}
+
+/* first paragraph container */
+.first {
+    margin-top: 5%;
+    height: 250px;
+}
+
+/* triangle to right */
+#triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 275px solid rgb(23, 23, 23);
+    border-left: 275px solid transparent;
+}
+
+/* parallaxing */
+.first>p {
+    margin-top: -30%;
+    transform: translateZ(0.25px) scale(0.75) translateY(10%);
+
+    /* Teksten blir opp-ned
+    transform: translateZ(.5px) scale(-1) translateY(10%);
+    */
+}
+
+/* second paragraph container */
+.second {
+    margin-top: 100px;
+    height: 400px;
+}
+
+/* parallaxing */
+.second>h1,
+.second>p {
+    transform: translateZ(0.25px) scale(0.75) translateY(-10%);
+}
+
+/* triangle to left */
+#triangle-topleft {
+    width: 0;
+    height: 0;
+    margin-left: 500px;
+    border-top: 275px solid rgb(23, 23, 23);
+    border-right: 275px solid transparent;
+}
+
+/* third paragraph container */
+.third {
+    margin-top: 50px;
+    margin-right: 10%;
+}
+
+.third a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+pre {
+    max-width: 600px;
+    margin: 20px 0 40px 100px;
+    padding-left: 15px;
+    color: black;
+    text-align: left;
+    background-color: rgb(245, 245, 245);
+    /* border: 1px solid yellow; */
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+/* HTML tags, names, attr, class, number, string */
+/* CSS class, attributes */
+.html-tag {
+    color: rgb(100, 100, 100);
+}
+
+.html-name {
+    color: rgb(82, 170, 241);
+}
+
+.html-attr,
+.css-selector-class,
+.css-number {
+    color: rgb(245, 191, 121);
+}
+
+.html-string,
+.css-attribute {
+    color: rgb(135, 184, 135);
+}
+
+.css-built_in {
+    color: rgb(205, 218, 134);
+}
+
+/* fourth paragraph container */
+.fourth {
+    height: 500px;
+}
+
+.fourth>p {
+    transform: translateZ(0.25px) scale(0.75) translateY(10%);
+}
+
+#dark_triangle {
+    width: 0;
+    height: 0;
+    margin-left: 500px;
+    border-top: 300px solid rgb(23, 23, 23);
+    border-right: 300px solid transparent;
+}
+
+#lesmer {
+    text-align: left;
+    font-family: inconsolata;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+/* iPad width 768px */
+@media (max-width: 800px) {
+    #triangle-topright {
+        display: none;
+    }
+
+    #triangle-topleft {
+        display: none;
+    }
+
+    #dark_triangle {
+        display: none;
+    }
+
+    .parallax_container>h1 {
+        margin-left: 10%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        margin-left: 0;
+        max-width: 90%;
+    }
+
+    .first {
+        height: 220px;
+    }
+
+    .first p {
+        margin-top: 13%;
+    }
+
+    .second {
+        margin-top: 0;
+    }
+
+    .parallax_left,
+    .parallax_right {
+        margin-left: 10%;
+    }
+
+    .parallax_right p {
+        margin-top: 0;
+    }
+
+    pre {
+        margin: 0;
+        margin-bottom: 40px;
+        text-align: left;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    /* body { font-size: 12px; } */
+    .parallax_container {
+        margin-top: 150px;
+    }
+
+    .first>p {
+        transform: none;
+    }
+
+    .second>h1,
+    .second>p {
+        transform: none;
+    }
+
+    .fourth>p {
+        transform: none;
+    }
+}

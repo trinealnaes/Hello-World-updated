@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="boxsizing.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="img/helloworld2.png" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel=“shortcut icon” href=“img/logo/helloworld-logo.png” />
+    <title>Box-Sizing | Hello World</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="img/HelloWorld2.png" alt="logo">
+            </a>
+        </div>
+        <div class="tag">
+            <a class="btn h" href="../Tagsider/html_tag.html">HTML</a>
+            <a class="btn c" href="../Tagsider/css_tag.html">CSS</a>
+            <a class="btn j" href="../Tagsider/js_tag.html">Javascript</a>
+        </div>
+        <div class="search">
+            <header>
+                <input type="text" />
+                <div class="close">
+                    <span class="front"></span>
+                    <span class="back"></span>
+                </div>
+            </header>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--   ARTICLE     -->
+<main>
+    <section class="article">
+        <article>
+            <h1>box-sizing: border-box;</h1>
+            <div class="fourboxes">
+                <img src="img/fourboxess.png" alt="Same size boxes with different border and padding" height=120px>
+            </div>
+            <p class="bildetekst">Bildet viser fire like store bokser, <br>med varierende border og padding.</p>
+            <br>
+
+            <div class="firstsection">
+                <h2>border-box</h2>
+                <p>Box-sizing egenskapen i CSS styrer hvordan boksmodellen for det gjeldende elementet håndteres, slik
+                    som vist i CSS-kode under:</p>
+                <div class="ttr"></div>
+                <!--<div class="square"></div>-->
+                <!--<div class="square a"></div>-->
+                <!--<img src="img/mybox.png" alt="CSS codes showing a selected box" height=125px;>-->
+
+                <!--<div class="square b"></div>-->
+                <pre class="preone"><code>
+    <span style="color:rgb(255, 187, 0)">.mybox</span><span style="color:rgb(0, 0, 0)">{</span>
+    <span style="color:rgb(16, 195, 255)">     box-sizing</span>: <span style="color:rgb(255, 145, 2)">"border-box"</span>;
+    <span style="color:rgb(0, 0, 0)">}</span>
+</code></pre>
+
+                <p>En av de vanligste måtene å bruke box-sizing egenskapen på, er å bruke den på alle elementene på
+                    siden, inklusive pseudoelementer, med universaltag'en *:</p>
+
+                <pre><code>
+    <span style="color:blue">*</span><span style="color:rgb(0, 0, 0)">{</span>
+    <span style="color:rgb(16, 195, 255)">  box-sizing</span>: <span style="color:rgb(255, 145, 2)">"border-box"</span>;
+    <span style="color:rgb(0, 0, 0)">}</span>
+</code></pre>
+
+                <!--<img src="img/unibox.png" alt="CSS codes showing all selected boxes" height=110px;>-->
+                <p>Dette kalles ofte “universal box-sizing”, og er en fin måte å jobbe på, fordi; bredden du (faktisk)
+                    angir, er bredden boksen tar. Man slipper altså å videre måtte ta høyde for ekstra bredder fra
+                    flere andre egenskaper, som for eksempel border og padding - og selv gjøre matematikken på dette.</p>
+            </div>
+
+            <div class="secondsection">
+                <h2>Bokstyper / Verdier</h2>
+                <p><span id="italic">content-box:</span> Dette er standardboksen, eller normalverdien. Bredde- og
+                    høyde- verdier gjelder kun for boksens innhold, videre blir eventuelt padding og border lagt på
+                    utsiden av boksen.<br>
+                    <span id="italic">padding-box:</span> Bredde- og høyde- verdier gjelder for boksens innhold og
+                    padding. Videre blir en eventuell border lagt på utsiden av boksen.<br>
+                    <span id="italic">border-box:</span> Bredde- og høyde- verdier gjelder for boksens innhold, padding
+                    og border. Life = Easy Street.<br>
+                    <span id="italic">inherit:</span> arver verdiene sine fra Parent elementet.</p>
+            </div>
+
+            <div class="thirdsection">
+                <h2>Eksempel</h2>
+                <p>Bildet under sammenligner en standard content-box (øverst) med en border-box (nederst).
+                    Den røde linjen mellom boksene representerer elementets angitte bredde før border og padding er
+                    lagt til. Legg merke til at elementet med standard box-sizing: content-box; overstiger den
+                    deklarerte bredden når padding og border blir lagt til på utsiden av boksen. Elementet nederst, med
+                    box-sizing: border-box; holder samme bredde selv etter at padding og border er lagt til.</p>
+                <!--<div class="square c"></div>-->
+            </div>
+            <img class="boxsize" src="img/boxsizing.png" alt="two boxes demonstrating default box and border box"
+                height=300px;>
+
+            <div class="fourthsection">
+                <h2>Bruk av Box-sizing</h2>
+                <p>La oss si vi setter et element til følgende; width: 100px; padding: 20px; border: 5px solid black;.
+                    Som standard vil boksen da være 150px bred. Dette skjer fordi content-box er standard box-sizing,
+                    og content-box er angitt til innholdets bredde alene. Dette fører til at padding og border må
+                    legges på utsiden av boksen. Med andre ord vil boksen altså øke plassen den tar opp på siden.
+                    <br><br>Hvis du i samme tilfellet endrer box-sizing til padding-box, vil paddingen flyttes til
+                    innsiden av den aktuelle boksen. Boksen ville da vært 110px bred, med 20px padding på innsiden av
+                    boksen, og 10px border på utsiden.
+                    <br><br>Om man skulle ønske å flytte både padding og border til innsiden av boksen, kan man benytte
+                    seg av border-box. Boksen vil da være 100px bred - borderen på 10px og paddingen på 20px vil altså
+                    bli flyttet til boksens innside.</p>
+                <!--<div class="square d"></div>-->
+            </div>
+
+            <div class="fifthsection">
+                <h2>Morsomt å vite</h2>
+                <p>Chris Coyier, grunnlegger av CSS-Tricks og med-gründer av CodePen, har erklært 1. februar "The
+                    International box-sizing Awareness Day"! Dette til ære for det han mener er den mest ydmyke og
+                    undervurderte, men alikevel fantastiske og nyttige CSS funksjonen: box-sizing. <a class="tilsiden"
+                        href="https://css-tricks.com/international-box-sizing-awareness-day/">Gå til siden.</a></p>
+                <div class="btr"></div>
+                <p><strong>Av:</strong> Andreas Gulsrud</p>
+            </div>
+            <img class="protest" src="img/box-protest.svg" alt="Humoristic picture of a pro border-box protest" height=300px;>
+
+            <!-- ARTICLE SLIDES -->
+            <h2 id="lesmer">Les mer:</h2>
+            <div class="artwrapper">
+                <a href="#">
+                    <div class="artikkel a1">
+                        <div class="corner marker_css"></div>
+                        <p>CSS Parallax</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="artikkel a2">
+                        <div class="corner marker_js"></div>
+                        <p>Jquery Tutorial</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="artikkel a3">
+                        <div class="corner marker_html"></div>
+                        <p>Hva er HTML 5?</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="foowrapper">
+                <div class="footer">
+                    <div class="logo liten">
+                        <img src="img/HelloWorld2.png" alt="logo" style="
+                        margin-top: 50px;
+                    ">
+                    </div>
+                    <div class="icons">
+                        <img src="icons/placeholder.svg" alt="place">
+                        <img src="icons/email.svg" alt="email">
+                        <img src="icons/telephone.svg" alt="phone">
+                        <p>Kong sverresgate 17, 5523 Haugesund</p>
+                        <p>hello.world@gmail.com</p>
+                        <p>+47 98 67 34 12</p>
+                        <div class="some">
+                            <img src="icons/linkedin.svg" alt="linkedin" style="
+                            margin-bottom: 60px;
+                            margin-top: 0px;
+                        ">
+                            <img src="icons/instagram.svg" alt="insta" style="
+                            margin-bottom: 60px;
+                            margin-top: 0px;
+                        ">
+                            <img src="icons/facebook.svg" alt="face" style="
+                            margin-bottom: 60px;
+                            margin-top: 0px;
+                        ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+</body>
+
+</html>

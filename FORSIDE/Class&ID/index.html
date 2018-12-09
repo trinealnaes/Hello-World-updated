@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:100,100i,200,200i,300,300i" rel="stylesheet">
+    <link rel=“shortcut icon” href=“img/logo/helloworld-logo.png”> <title>Artikkel</title>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="img/helloworld2x.png" alt="logo">
+            </a>
+        </div>
+        <div class="tag">
+            <a class="btn h" href="../Tagsider/html_tag.html">HTML</a>
+            <a class="btn c" href="../Tagsider/css_tag.html">CSS</a>
+            <a class="btn j" href="../Tagsider/js_tag.html">Javascript</a>
+        </div>
+        <div class="search">
+            <header>
+                <input type="text" />
+                <div class="close">
+                    <span class="front"></span>
+                    <span class="back"></span>
+                </div>
+            </header>
+        </div>
+    </div>
+    <main>
+
+        <div class="over">
+            <p>HTML</p>
+            <h1>Forskjellen mellom Class og ID</h1>
+            <div class="tri1"></div>
+        </div>
+
+
+
+
+        <main>
+            <section class="hooks">
+
+                <div class="triangle"></div>
+                <article>
+                    <h2>ID'er og Class'er er som kroker</h2>
+
+                    <main>
+
+                        <p>Vi trenger måter å beskrive innhold på i et HTML / XHTML-dokument. De grunnleggende
+                            elementene
+                            som<span style="color: rgb(228, 77, 38)"> &lt;h1&gt;</span>,<span style="color: rgb(228, 77, 38)">&lt;p&gt;</span>
+                            og <span style="color: rgb(228, 77, 38)">&lt;ul&gt;</span> vil ofte gjøre jobben, men vårt
+                            grunnleggende sett med koder dekker ikke alle mulige typer sideelement eller layoutvalg.
+                            For
+                            dette trenger vi ID og Klasser.<br> For eksempel <span style="color:rgb(228, 77, 38)">&lt;ul
+                                id="nav"&gt;</span>, gir dette oss muligheten til å målrette mot denne uordnede listen
+                            spesielt, slik at vi kan manipulere det unikt til andre uordnede lister på vår side. Eller
+                            vi
+                            kan ha en del på vår side som ikke har noen relevant tag for å signere den, for eksempel en
+                            bunntekst, hvor vi kan gjøre noe slikt: <span style="color:rgb(228, 77, 38)">&lt;div
+                                id="footer"&gt;</span>. Eller kanskje har vi bokser i vår sidefelt for å holde
+                            innholdet
+                            derav skilt på en eller annen måte:<br> <span style="color: rgb(228, 77, 38)">&lt;div
+                                class="sidebar-box"&gt;</span>.</p>
+
+                        <p>Disse ID-ene og klassene "kroker" vi trenger å bygge opp i markup for å få våre hender på
+                            dem.
+                            CSS trenger åpenbart disse, slik at vi kan bygge selektorer og gjøre vår styling, men andre
+                            web
+                            språk som JavaScript avhenger av dem også. Men hva er forskjellen mellom dem?</p>
+
+                    </main>
+                </article>
+            </section>
+        </main>
+
+        <br>
+
+
+        <main>
+            <section class="unike">
+
+
+                <div class="rectangle"></div>
+                <div class="rectangle1"></div>
+                <div class="rectangle2"></div>
+                <div class="rectangle3"></div>
+
+                <article>
+                    <h2>ID'er er unike</h2>
+
+                    <main>
+                        <ul>
+                            <li>Hvert element kan bare ha én ID</li>
+                            <li>Hver side kan bare ha ett element med den IDen</li>
+                        </ul>
+
+                        <p>Da jeg først lærte dette, hørte jeg om og om igjen at du bare skal bruke ID en gang, men
+                            du
+                            kan bruke klasser om og om igjen. Det gikk i utgangspunktet i ett øre og utover fordi
+                            det
+                            hørtes ut som en god "tommelfingerregel" for meg i stedet for noe ekstremt viktig. Hvis
+                            du
+                            bare er en HTML / CSS person, kan denne holdningen vedvare fordi for deg, synes de
+                            egentlig
+                            ikke å gjøre noe annerledes. </p>
+                        <p> Her er en: Koden din vil ikke bestå validering hvis du bruker samme ID på mer enn ett
+                            element. Validering bør være viktig for oss alle, slik at alene er en stor. Vi går over
+                            flere grunner til unikhet når vi fortsetter.</p>
+                    </main>
+                </article>
+            </section>
+        </main>
+
+
+        <main>
+
+            <div class="triangle2"></div>
+            <section class="ikke">
+
+
+                <article>
+                    <h2>Class'er er IKKE unike</h2>
+
+                    <main>
+
+
+
+                        <ul>
+                            <li>Du kan bruke samme klasse på flere elementer</li>
+                            <li>Du kan bruke flere klasser på samme element.</li>
+                        </ul>
+
+                        <br>
+                        <p>Eventuell stylinginformasjon som må brukes på flere objekter på en side, skal gjøres
+                            med
+                            en klasse. Ta for eksempel en side med flere "widgets":</p>
+
+                        <pre><code>
+ <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"Widget"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+ <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"Widget"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+ <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"Widget"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+</code></pre>
+                        <br>
+
+
+                        <p>Du kan nå bruke klassenavnet "widget" som kroken din til å bruke samme sett med
+                            styling
+                            til hver enkelt av disse. Men hva om du trenger en av dem til å være større enn den
+                            andre, men likevel dele alle de andre attributter? Klasser har du dekket der, da du
+                            kan
+                            søke mer enn én klasse:</p>
+
+                        <pre><code>
+ <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"Widget"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+ <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"Widget Big"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+ <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"Widget"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+</code></pre>
+
+                        <br>
+
+                        <p>Du trenger ikke å lage et helt nytt klassenavn her, bare bruk en ny klasse rett i
+                            klassen attributtet. Disse klassene er avgrenset av plass og de fleste nettlesere
+                            støtter et hvilket som helst antall av dem (faktisk, det er mer som tusenvis, men
+                            langt
+                            mer enn du noensinne trenger).</p>
+                    </main>
+                </article>
+            </section>
+        </main>
+
+
+
+
+        <main>
+            <section class="begge">
+
+                <div class="trian"></div>
+                <div class="trian1"></div>
+                <div class="trian2"></div>
+                <div class="trian3"></div>
+                <div class="trian4"></div>
+                <div class="trian5"></div>
+
+
+                <article>
+                    <h2>Elementer kan ha begge deler</h2>
+
+                    <main>
+                        <p>Det er ingenting som hindrer deg fra å ha både en ID og en klasse på et enkelt
+                            element. Faktisk er det ofte en veldig god idé. Ta for eksempel
+                            standardmarkeringen
+                            for et WordPress-kommentarliste:</p>
+                        <pre><code>
+    <<span style="color:blue">li</span><span style="color:rgb(98, 216, 255)"> id</span>=<span style="color:orange">"comment-27299"</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"item"</span>><<span style="color:black">/</span><span style="color:blue">li</span>>      
+                                                                </code></pre>
+                        <p>Det har en klasse brukt på det som du kanskje vil ha for styling av alle
+                            kommentarer
+                            på siden, men det har også en unik ID-verdi (dynamisk generert av WordPress,
+                            pent
+                            nok). Denne ID-verdien er nyttig for direkte kobling. Nå kan jeg enkelt lenke
+                            til
+                            en bestemt kommentar på en bestemt side.</p>
+
+
+                    </main>
+                </article>
+            </section>
+        </main>
+
+
+
+        <main>
+
+            <div class="triangle3"></div>
+            <section class="dontcare">
+
+
+                <article>
+                    <h2>CSS bryr seg ikke</h2>
+
+                    <main>
+                        <p>Når det gjelder CSS, er det ingenting du kan gjøre med en ID som du ikke kan
+                            gjøre med en klasse og vise versa. Jeg husker da jeg først lærte CSS og jeg
+                            hadde et problem, noen ganger ville jeg prøve og feilsøke ved å bytte rundt
+                            disse verdiene. Nei. CSS bryr seg ikke.</p>
+
+
+                    </main>
+                </article>
+            </section>
+        </main>
+
+
+
+        <main>
+            <section class="care">
+
+
+                <article>
+                    <h2>JavaScript bryr seg</h2>
+
+                    <main>
+                        <p>JavaScript-folk er allerede sannsynligvis mer i tråd med forskjellene
+                            mellom
+                            klasser og ID-er. JavaScript avhenger av at det bare er ett sideelement
+                            med
+                            et bestemt ID, ellers vil den vanlige getElementById-funksjonen ikke
+                            være
+                            pålitelig. For de som er kjent med jQuery, vet du hvor lett det er å
+                            legge
+                            til og fjerne klasser for sideelementer. Det er en innfødt og bygget i
+                            funksjon av jQuery. Legg merke til hvordan ingen slik funksjon
+                            eksisterer
+                            for ID-er. Det er ikke JavaScript som er ansvarlig for å manipulere
+                            disse
+                            verdiene, det vil føre til flere problemer enn det ville være verdt.</p>
+
+                    </main>
+                </article>
+            </section>
+        </main>
+
+
+        <main>
+
+            <div class="triangle4"></div>
+            <section class="dont">
+
+
+                <article>
+                    <h2>Hvis du ikke trenger dem, ikke bruk dem</h2>
+
+                    <main>
+                        <p> Som du kan se, er klasser og ID-er veldig viktige, og vi stoler på
+                            dem
+                            hver dag for å gjøre styling og sidehåndtering som vi trenger å
+                            gjøre.
+                            Du bør imidlertid bruke dem på en god måte og semantisk.</p>
+                        <br>
+                        <p class="block">Dette betyr å unngå ting som dette:</p>
+
+                        <pre><code>
+  <<span style="color:blue">a</span><span style="color:rgb(98, 216, 255)"> href</span>=<span style="color:orange">"http://hello-world.com"</span><span style="color:rgb(98, 216, 255)"> class</span>=<span style="color:orange">"link"</span>>Helo-World.com<<span style="color:black">/</span><span style="color:blue">a</span>>      
+</code></pre>
+
+                        <p> Vi vet allerede dette elementet er en lenke, det er et
+                            ankerelement!
+                            Ingen spesiell nødvendighet her for å bruke en klasse, da vi
+                            allerede
+                            kan bruke styling via sin tag.</p>
+                        <br>
+                        <p class="block">Unngå også dette:</p>
+                        <div class="pre2">
+                            <pre>
+    <code>
+  <<span style="color:blue">div</span><span style="color:rgb(98, 216, 255)"> id</span>=<span style="color:orange">"right-col"</span>><<span style="color:black">/</span><span style="color:blue">div</span>>
+    </code>
+</pre>
+                        </div>
+                        <p>ID brukes hensiktsmessig her siden siden sannsynligvis bare vil ha
+                            en
+                            enkelt høyre kolonne, men navnet er upassende. Prøv å beskrive
+                            elementets sammenheng, ikke hvor det er eller hvordan det ser ut.
+                            En ID
+                            her av "sidebar" ville være mer hensiktsmessig.</p>
+
+                    </main>
+                </article>
+                <p><strong>Av:</strong> Andreas Hjørnevik</p>
+            </section>
+        </main>
+    </main>
+
+    <h2 id="lesmer">Les mer:</h2>
+    <div class="wrapper1">
+        <a href="#">
+            <div class="artikkel a1">
+                <div class="corner marker_css"></div>
+                <p>Jquery Tutorial</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="artikkel a2">
+                <div class="corner marker_js"></div>
+                <p>CSS Parallax</p>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="artikkel a3">
+                <div class="corner marker_html"></div>
+                <p>Hva er nytt i HTML 5?</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="wrapper">
+        <div class="footer">
+            <div class="logo liten">
+                <img src="img/helloworld2x.png" alt="logo" style="
+                margin-top: 50px;
+            ">
+            </div>
+            <div class="icons">
+                <img src="icons/placeholder.svg" alt="place">
+                <img src="icons/email.svg" alt="email">
+                <img src="icons/telephone.svg" alt="phone">
+                <p>Kong sverresgate 17, 5523 Haugesund</p>
+                <p>hello.world@gmail.com</p>
+                <p>+47 98 67 34 12</p>
+                <div class="some">
+                    <img src="icons/linkedin.svg" alt="linkedin" style="
+                    margin-bottom: 60px;
+                    margin-top: 0px;
+                ">
+                    <img src="icons/instagram.svg" alt="insta" style="
+                    margin-bottom: 60px;
+                    margin-top: 0px;
+                ">
+                    <img src="icons/facebook.svg" alt="face" style="
+                    margin-bottom: 60px;
+                    margin-top: 0px;
+                ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

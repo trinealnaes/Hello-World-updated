@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="frontpage.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="images/helloworld2x.png" alt="logo">
+        </div>
+        <div class="search">
+            <header>
+                <input type="text" />
+                <div class="close">
+                    <span class="front"></span>
+                    <span class="back"></span>
+                </div>
+            </header>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://source.unsplash.com/ipARHaxETRk/1400x600" style="width:100%">
+                <div class="text">Tips til hvordan du kan være mer produktiv</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://source.unsplash.com/SYTO3xs06fU/1400x600" style="width:100%">
+                <div class="text">Les hvorfor prototyping er viktig</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://source.unsplash.com/mcLpPD36-2k/1400x600" style="width:100%">
+                <div class="text">Studie viser at vi jobber bedre sammen</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://source.unsplash.com/hGV2TfOh0ns/1400x600" style="width:100%">
+                <div class="text">Hjemmekontor minsker stress</div>
+            </div>
+
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!-- Animasjoner av html, css og js -->
+        <div class="animation-box">
+            <div class="box">
+                <video width="200" height="153" controlsList="nodownload" muted loop>
+                    <source src="images/html_ani.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a class="btn h" href="Tagsider/html_tag.html">HTML</a>
+            </div>
+            <div class="box">
+                <video width="200" height="153" controlsList="nodownload" muted loop>
+                    <source src="images/css_ani.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a class="btn c" href="Tagsider/css_tag.html">CSS</a>
+            </div>
+
+            <div class="box">
+                <video width="200" height="153" controlsList="nodownload" muted loop>
+                    <source src="images/js_ani.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <a class="btn j" href="Tagsider/js_tag.html">Javascript</a>
+            </div>
+        </div>
+
+        <!-- Artikler -->
+        <div class="artikkel-wrapper">
+            <a class="stor art-en" href="#">
+                <div class="corner marker_html"></div>
+                <p class="headline">Hva er nytt i HTML 5?</p>
+            </a>
+
+            <a class="liten art-to" href="#">
+                <div class="corner marker_css"></div>
+                <p class="headline">Komplett guide til CSS Grids</p>
+            </a>
+
+            <a class="middels art-tre" href="#">
+                <div class="corner marker_js"></div>
+                <p class="headline">Introduksjon til Sets i JavaScript</p>
+            </a>
+            
+            <a class="stor art-fire" href="Class&ID/index.html">
+                <div class="corner marker_html"></div>
+                <p class="headline">Forskjell mellom Class & ID</p>
+            </a>
+        
+            <a class="liten art-fem" href="#">
+                <div class="corner marker_html"></div>
+                <p class="headline">HTML Layout Tutorial</p>
+            </a>
+        
+            <a class="middels art-seks" href="#">
+                <div class="corner marker_js"></div>
+                <p class="headline">Grunnleggende programmering</p>
+            </a>
+
+            <a class="stor art-sju" href="#">
+                <div class="corner marker_js"></div>
+                <p class="headline">YouTube Video Player med JavaScript</p>
+            </a>
+
+            <a class="liten art-åtte" href="Prallax/article.html">
+                <div class="corner marker_css"></div>
+                <p class="headline">CSS Parallax</p>
+            </a>
+        
+            <a class="middels art-ni" href="#">
+                <div class="corner marker_html"></div>
+                <p class="headline">Lær HTML på 10 minutter</p>
+            </a>
+
+            <a class="stor art-ti" href="Bokssizing/boxsizing.html">
+                <div class="corner marker_css"></div>
+                <p class="headline">CSS Borderbox</p>
+            </a>
+        
+            <a class="middels art-ellve" href="#">
+                <div class="corner marker_js"></div>
+                <p class="headline">Jquery Tutorial</p>
+            </a>
+        
+            <a class="liten art-tolv" href="CSSanimasjon/animation.html">
+                <div class="corner marker_css"></div>
+                <p class="headline">CSS Animasjoner</p>
+            </a>
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="images/helloworld2x.png" alt="logo">
+            </div>
+            <div class="icons">
+                <img src="icons/placeholder.svg" alt="place">
+                <p>Kong sverresgate 17, 5523 Haugesund</p>
+                <img src="icons/email.svg" alt="email">
+                <p>hello.world@gmail.com</p>
+                <img src="icons/telephone.svg" alt="phone">
+                <p>+47 98 67 34 12</p>
+            </div>
+            <div class="some">
+                <img src="icons/linkedin.svg" alt="linkedin">
+                <img src="icons/instagram.svg" alt="insta">
+                <img src="icons/facebook.svg" alt="face">
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

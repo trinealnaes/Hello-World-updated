@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/artikkelslide.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="img/helloworld2x.png" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <title>Parallaxing</title>
+</head>
+
+<body>
+    <!-- Meny -->
+    <div class="top">
+        <div class="logo">
+            <a href="../index.html">
+                <img src=" img/helloworld2x.png" alt="logo">
+            </a>
+        </div>
+        <div class="tag">
+            <a class="btn h" href="../Tagsider/html_tag.html">HTML</a>
+            <a class="btn c" href="../Tagsider/css_tag.html">CSS</a>
+            <a class="btn j" href="../Tagsider/js_tag.html">Javascript</a>
+        </div>
+        <div class="search">
+            <header>
+                <input type="text" />
+                <div class="close">
+                    <span class="front"></span>
+                    <span class="back"></span>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="parallax_container">
+        <h1>
+            <span id="heading_marker">Hva er</span> parallax scrolling
+        </h1>
+        <div class="parallax_left first">
+            <div id="triangle-topright"></div>
+            <p>
+                Tenk deg å være en passasjer i en bil som går
+                ned motorveien, og du ser ut av vinduet og
+                begynner å dagdrømme. Trærne, bygningene og
+                langstrakte land passerer deg forbi.
+                Objektene som er nærmest deg og veien selv
+                går fort i en uskarphet, mens de langstrakte landene
+                i avstand beveger seg grasiøst og uten hastverk.
+                Parallax-effekten forsøker å replikere den
+                opplevelsen av forgrunnsobjekter som beveger
+                seg raskere enn sine motstykker i bakgrunnen.
+            </p>
+        </div>
+
+        <img>
+
+        <div class="parallax_right second">
+            <h1>
+                Problemet med Javascript-implementering
+            </h1>
+            <div id="triangle-topleft"></div>
+            <p>
+                Det er mange JavaScript-biblioteker der ute som
+                forsøker å oppnå en lignende effekt. Dessverre,
+                for de minste brukstilfellene på nettet, kan de bli
+                implementert dårlig, og uten tanke på ytelse.
+                Disse JavaScript-implementeringene ville lytte
+                til scrollehendelsen og endre elementer i DOM direkte.
+                Disse kan føre til unødvendig repaints og kan
+                introdusere jank hvis de ikke blir implementert på riktig måte.
+                <br>
+                <br>
+                Kjernefordelen ved å bruke ren CSS, laster ikke
+                bare av den ekstra tegningen i DOM, men gir også
+                maskinvareakselerasjon og en myk jevn effekt som
+                ikke spiser CPUen din.
+            </p>
+        </div>
+
+        <div class="parallax_left third">
+            <h1>
+                Hvordan implementere en minimal parallax effekt
+            </h1>
+            <p>
+                Først la oss definere HTML-teksten vår.
+            </p>
+            <pre>
+        <!-- Må ligge så langt inne for å komme på rett sted på nettside -->
+    <code>
+<span class="html-tag">&lt;<span class="html-name">div</span> <span class="html-attr">class</span>=<span class="html-string">"MainContainer"</span>&gt;</span>
+    
+    <span class="html-tag">&lt;<span class="html-name">div</span> <span class="html-attr">class</span>=<span class="html-string">"ParallaxContainer"</span>&gt;</span>
+        // Overskrifter til siden
+    <span class="html-tag">&lt;/<span class="html-name">div</span>&gt;</span>
+
+    <span class="html-tag">&lt;<span class="html-name">div</span> <span class="html-attr">class</span>=<span class="html-string">"ContentContainer"</span>&gt;</span>
+        <span class="html-tag">&lt;<span class="html-name">div</span> <span class="html-attr">class</span>=<span class="html-string">"Content"</span>&gt;</span>
+            // Legg inn resten av sidens 
+            innhold her
+        <span class="html-tag">&lt;/<span class="html-name">div</span>&gt;</span>
+    <span class="html-tag">&lt;/<span class="html-name">div</span>&gt;</span>
+<span class="html-tag">&lt;/<span class="html-name">div</span>&gt;</span>
+    </code>
+    </pre>
+            <p>
+                Og her er noen grunnleggende CSS for å få det i gang:
+            </p>
+            <pre>
+    <code>
+<span class="css-selector-class">.MainContainer</span> {
+    <span class="css-attribute">perspective</span>: <span class="css-number">1px</span>;
+    <span class="css-attribute">transform-style</span>: preserve-<span class="css-number">3</span>d;
+    <span class="css-attribute">height</span>: <span class="css-number">100vh</span>;
+    <span class="css-attribute">overflow-x</span>: hidden;
+    <span class="css-attribute">overflow-y</span>: scroll;
+    }
+    
+<span class="css-selector-class">.ParallaxContainer</span> {
+    <span class="css-attribute">display</span>: flex;
+    <span class="css-attribute">flex</span>: <span class="css-number">1</span> <span class="css-number">0</span> auto;
+    <span class="css-attribute">position</span>: relative;
+    <span class="css-attribute">height</span>: <span class="css-number">100vh</span>;
+    <span class="css-attribute">transform</span>: <span class="css-built_in">translateZ</span>(-1px) <span class="css-built_in">scale</span>(2);
+    <span class="css-attribute">z-index</span>: -<span class="css-number">1</span>;
+    }
+    
+<span class="css-selector-class">.ContentContainer</span> {
+    <span class="css-attribute">display</span>: block;
+    <span class="css-attribute">position</span>: relative;
+    <span class="css-attribute">background-color</span>: white;
+    <span class="css-attribute">z-index</span>: <span class="css-number">1</span>;
+    }
+    </code>
+    </pre>
+            <p>Prøv selv på CodePen <a href="https://codepen.io/trinealnaes/pen/zJmGZv" target="_blank">her!</a></p>
+        </div>
+
+        <div class="parallax_right fourth">
+            <div id="dark_triangle">
+            </div>
+
+            <p>
+                Den magiske er i perspektivet, og transformer regler.
+                Vi definerer vår MainContainer med perspektiv. Dette
+                setter scenen for transformasjonsreglene våre. I vår
+                ParalaxContainer, vi forvandler den til å i utgangspunktet
+                presse den div inn i bakgrunnen bruker translateZ (-1px).
+                Elementene og teksten i denne beholderen vil se halvparten
+                av størrelsen de burde være siden vi har presset dem inn
+                i bakgrunnen. For å kompensere for dette, legger vi til
+                skala. Det vil endre størrelsen på bakgrunnsinnholdet
+                tilbake til sin opprinnelige størrelse, men rullingseffekten
+                er som om den fortsatt var i bakgrunnen.
+                <br>
+                <br>
+                Hva er kult om dette, er at du har muligheten til å
+                spille med dybden. Du kan endre hvor langt i bakgrunnen
+                du vil presse den ved å endre translateZ og skala regler.
+                Hva dette gjør er at du kan endre hvordan Raskt eller sakte,
+                bakgrunnen din vil scrolle ut av visningen.
+                <br>
+                <br>
+                For eksempel, prøv dette for en mer subtil effekt:
+                <br>
+                <br>
+                <span class="css-attribute">transform</span>: <span class="css-built_in">translateZ</span>(-5px) <span
+                    class="css-built_in">scale</span>(6);
+            </p>
+        </div>
+        <p>Av: Trine Merete Alnaes</p>
+    </div>
+
+    <!-- slideshow -->
+    <h2 id="lesmer">Les mer:</h2>
+    <div class="fifth">
+        <a href="#">
+            <div class="artikkel a1">
+                <div class="corner marker_css"></div>
+                <p>CSS Gradient</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="artikkel a2">
+                <div class="corner marker_css"></div>
+                <p>CSS buttons</p>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="artikkel a3">
+                <div class="corner marker_js"></div>
+                <p>JavaScript stars</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="logo liten">
+            <img src="img/helloworld2x.png" alt="logo" style="
+            margin-top: 50px;
+        ">
+        </div>
+        <div class="icons">
+            <img src="icons/placeholder.svg" alt="place">
+            <img src="icons/email.svg" alt="email">
+            <img src="icons/telephone.svg" alt="phone">
+            <p>Kong sverresgate 17, 5523 Haugesund</p>
+            <p>hello.world@gmail.com</p>
+            <p>+47 98 67 34 12</p>
+            <div class="some">
+                <img src="icons/linkedin.svg" alt="linkedin" style="
+                margin-bottom: 60px;
+                margin-top: 0px;
+            ">
+                <img src="icons/instagram.svg" alt="insta" style="
+                margin-bottom: 60px;
+                margin-top: 0px;
+            ">
+                <img src="icons/facebook.svg" alt="face" style="
+                margin-bottom: 60px;
+                margin-top: 0px;
+            ">
+            </div>
+        </div>
+</body>
+
+</html>

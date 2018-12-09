@@ -1,0 +1,203 @@
+
+/* tekst + popup */
+
+.text-ae {
+    margin: 0 auto;
+}
+
+.triangle {
+    visibility: visible;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -2000;
+}
+
+.triangle.small {
+    left: 420px;
+    border-top: 300px solid #0000002d;
+    border-left: 300px solid transparent;
+}
+
+.triangle.big {
+    right: 200px;
+    border-style: solid;
+    border-width: 500px 500px 0 0;
+    border-color: #0000002d transparent transparent transparent;
+}
+
+.egenskaper {
+    margin-top: -100px;
+}
+
+ul li {
+    width: 500px;
+    line-height: 1.6em;
+}
+
+.knapp-popup {
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    top: 300px;
+}
+
+.knapp-popup.ease {
+    top: 500px;
+}
+
+#btnPopup {
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 14px;
+    color: #fff;
+    font-size: 15pt;
+    background-color: #ed612c;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+
+    cursor: pointer;
+    transition: all 5s ease-in-out;
+    animation: scale 2s ease-in-out infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#cb,
+#cb2 {
+    display: none;
+}
+
+#popup1,
+#popup2 {
+    position: relative;
+    left: 0;
+}
+
+.overlay,
+.overlay-to {
+    width: 500px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    right: 0;
+
+    background: rgb(20, 20, 20);
+    border-radius: 10px;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay-to {
+    height: 400px;
+}
+
+#cb:checked~.overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+#cb2:checked~.overlay-to {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.content p {
+    width: 400px;
+    margin-top: 60px;
+    margin-left: 30px;
+    line-height: 1.6em;
+}
+
+#popup2 .content p {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 25px;
+    font-weight: bold;
+
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.popup .close:hover {
+    color: #ed612c;
+}
+
+
+@media screen and (max-width:880px) {
+    .click {
+        width: 500px;
+        height: 500px;
+    }
+
+    .egenskaper {
+        margin-top: 100px;
+    }
+
+    #btnPopup {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+
+    .popup {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width:375px) {
+ 
+    .egenskaper {
+        margin-top: 30px;
+    }
+    .text-ae {
+        width: 350px;
+    }
+
+    ul li {
+        width: 350px;
+    }
+
+  
+
+}
