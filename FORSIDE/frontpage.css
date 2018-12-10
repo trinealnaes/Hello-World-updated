@@ -25,12 +25,19 @@ body {
 /* Slideshow container */
 .slideshow-container {
     max-width: 100%;
+    height: 600px;
+    overflow: hidden;
+    
     position: relative;
     margin: 0 auto;
     z-index: 1;
   }
   
-  .slideshow-container img { height: 600px; }
+  .slideshow-container img { width: 100%; height: auto; }
+  .slideshow-container #productivity { margin-top: -65px; }
+  .slideshow-container #prototyping { width:110%; margin-left: -80px; }
+  .slideshow-container #teamwork { margin-top: -250px; }
+  .slideshow-container #homeoffice { margin-top: -100px; }
   .mySlides { display: none; }
 
   .text {
