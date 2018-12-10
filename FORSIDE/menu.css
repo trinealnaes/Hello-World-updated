@@ -40,17 +40,20 @@ body {
 
 .btn.h {
     width: 60px;
-    border-bottom-color: #ed612c;
+    border-bottom-color: #ff672f;
+    filter: drop-shadow(0 0px 1px #ff672f);
 }
 
 .btn.c {
     width: 45px;
-    border-bottom-color: #00adf6;
+    border-bottom-color: #06b4ff;
+    filter: drop-shadow(0 0px 1px #06b4ff);
 }
 
 .btn.j {
     width: 100px;
-    border-bottom-color: #f0b24b;
+    border-bottom-color: #ffc64d;
+    filter: drop-shadow(0 0px 1px #ffc64d);
 }
 
 .btn:hover {

@@ -37,7 +37,7 @@ input:focus {
     width: 200px;
     height: 40px;
     border-radius: 10px;
-    border-color: #f0b24b;
+    border-color: #ffc64d;
     padding: 0 20px;
     line-height: 2em;
     font-weight: 100;
@@ -47,7 +47,7 @@ input:focus {
 
 input {
     float: right;
-    border: 3px solid #f0b24b;
+    border: 3px solid #ffc64d;
     outline: none;
     width: 25px;
     cursor: pointer;
@@ -58,14 +58,14 @@ input {
     border-radius: 40px;
     background: none;
     font-size: 0; 
-    box-shadow: 0 0 3px #f0b24b, inset 0 0 3px #f0b24b;
+    box-shadow: 0 0 3px #ffc64d, inset 0 0 3px #ffc64d;
 }
 
 .close span {
     width: 3px;
     height: 15px;
     border-radius: 2px;
-    background: #f0b24b;
+    background: #ffc64d;
     display: inline-block;
     cursor: pointer;
 }
@@ -86,7 +86,7 @@ input {
     top: 20px;
     transform: rotate(-45deg);
     transition: .2s all ease-in;
-    box-shadow: 0 0 3px #f0b24b, inset 0 0 3px #f0b24b;
+    box-shadow: 0 0 3px #ffc64d, inset 0 0 3px #ffc64d;
 } 
          
 input:focus + div .front {
