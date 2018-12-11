@@ -1,26 +1,20 @@
-* {
-    box-sizing: border-box;
-
-}
+* { box-sizing: border-box; }
 
 html {
     margin: 0;
-    /* NY */
     padding: 0;
     height: 100%;
     overflow: hidden;
 }
 
 body {
-    background-color: rgb(34, 34, 34);
-    background-size: 600% 600%;
+    background-image: linear-gradient(-35deg, rgb(10, 10, 10), rgb(30, 28, 30), rgb(10, 10, 10));
+    background-size: 100% 3500px;
+    background-repeat: no-repeat;
 
-    color: white;
+    color: white; 
+    font-size: 16px; 
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.6em;
-    font-weight: 300;
-    letter-spacing: 1px;
 
     /* PARALLAXING EFFECT */
     perspective: 1px;
@@ -44,114 +38,15 @@ body {
     }
 }
 
-/* LOGO / MENU / SEARCH */
-.top {
-    width: 100%;
-    height: 120px;
-    /* NY - fra 100px til 120px */
-    /* border: 1px solid red; */
-}
-
-.logo {
-    margin: 20px 25px;
-    /* NY - økt margin l og r fra 20px til 25px*/
-    position: absolute;
-    z-index: 1000;
-}
-
-.logo img {
-    width: auto;
-    height: 92px;
-}
-
-.search {
-    margin: 20px;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-}
-
-.search img {
-    width: 30px;
-    height: 30px;
-}
-
-/* Change logo size */
-@media screen and (max-width:768px) {
-    .logo img {
-        width: auto;
-        height: 62px;
-        margin-top: 20px;
-    }
-}
-
-@media screen and (max-width:375px) {
-    .logo img {
-        width: auto;
-        height: 82px;
-    }
-}
-
-/* menu */
-.tag {
-    margin: 0 auto;
-    width: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-
-    position: relative;
-    top: 50px;
-}
-
-.tag a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Change menu position */
-@media screen and (max-width:375px) {
-    .tag {
-        top: 150px;
-    }
-}
-
-/* Menubuttons (html, css, js) */
-.btn {
-    height: 30px;
-    padding: 0;
-    margin: 20px;
-    border-bottom: 2px solid;
-    text-align: center;
-}
-
-.btn.h {
-    width: 60px;
-    border-bottom-color: #ed612c;
-}
-
-.btn.c {
-    width: 45px;
-    border-bottom-color: #00adf6;
-}
-
-.btn.j {
-    width: 100px;
-    border-bottom-color: #f0b24b;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
 /* PARALLAXING */
 /* h2 heading */
 .parallax_container {
     max-width: 1000px;
     margin: 75px auto;
     text-align: center;
+    line-height: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 /* top image */
@@ -170,10 +65,10 @@ h1 {
 
 /* marks what tag it belongs to */
 #heading_marker {
-    color: #00adf6;
+    color: #06b4ff;
 }
 
-p {
+.article-text {
     max-width: 600px;
     margin-left: 100px;
     text-align: left;
@@ -205,10 +100,6 @@ p {
 .first>p {
     margin-top: -30%;
     transform: translateZ(0.25px) scale(0.75) translateY(10%);
-
-    /* Teksten blir opp-ned
-    transform: translateZ(.5px) scale(-1) translateY(10%);
-    */
 }
 
 /* second paragraph container */
@@ -251,7 +142,6 @@ pre {
     color: black;
     text-align: left;
     background-color: rgb(245, 245, 245);
-    /* border: 1px solid yellow; */
     border-radius: 5px;
     white-space: pre-wrap;
 }
@@ -298,11 +188,16 @@ pre {
     border-right: 300px solid transparent;
 }
 
+#author {
+    margin-top: 150px;
+}
+
 #lesmer {
     text-align: left;
-    font-family: inconsolata;
+    font-family: 'Inconsolata', monospace;
     font-size: 1.2rem;
     font-weight: 400;
+    letter-spacing: 0;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
     margin-left: 160px;

@@ -54,11 +54,11 @@ input {
 
     transition: .2s all ease-in;
     height: 25px;
-    color: #222;
+    color: white;
     border-radius: 40px;
     background: none;
     font-size: 0; 
-    box-shadow: 0 0 3px #ffda00, inset 0 0 3px #ffda00;
+    box-shadow: 0 0 1px #ffda00, inset 0 0 1px #ffda00;
 }
 
 .close span {
@@ -86,7 +86,7 @@ input {
     top: 20px;
     transform: rotate(-45deg);
     transition: .2s all ease-in;
-    box-shadow: 0 0 3px #ffda00, inset 0 0 3px #ffda00;
+    box-shadow: 0 0 1.5px #ffda00, inset 0 0 1.5px #ffda00;
 } 
          
 input:focus + div .front {

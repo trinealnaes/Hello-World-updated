@@ -3,8 +3,6 @@
 }
 
 body {
-    letter-spacing: 1px;
-    font-weight: 300;
     margin: 0;
     font-size: 16px;
 }
@@ -65,43 +63,33 @@ body {
 .btn.c:hover { width: 50px; }
 .btn.j:hover { width: 117px; }
 
-
+/* Change logo size */
 @media screen and (max-width:768px) {
     .logo img {
         width: auto;
         height: 62px;
         margin-top: 20px;
     }
-
     input:focus {
         width: 150px;
     }
-
 }
 
 @media screen and (max-width:375px) {
-
     .top {
         margin-left: 30px;
     }
-
     .search {
         right: 5px;
     }
-
     input:focus {
         width: 150px;
     }
-
     .logo img {
         width: auto;
         height: 82px;
     }
-
-
-
     .tag {
         top: 150px;
     }
-
 }

@@ -8,50 +8,33 @@
 }
 
 /* link til andre artikler */ 
-
 .artikkel {
     width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; 
-    justify-content: center;
-    opacity: 0.5;   
+    justify-content: center; 
     background-size: cover;
     background-position: center center; 
+    opacity: 1;  
 }
-
 
 .artikkel:hover{
-    opacity: 1;
+    opacity: 0.8;
 }
 
-.artikkel.a1 {
-    background-image: url(img/css/css_gradient.svg);
-    box-shadow: 0 6px 8px rgb(22, 22, 22);
+.artikkel.a1, .artikkel.a2, .artikkel.a3 {
+    box-shadow: 0 3px 12px rgb(0, 0, 0);
     width: 340px;
     height: 200px; 
     margin: 20px; 
     position: relative;
 }
 
-.artikkel.a2 {
-    background-image: url(img/css/css_buttons3.png);
-    box-shadow: 0 6px 8px rgb(22, 22, 22);
-    width: 340px;
-    height: 200px; 
-    margin: 20px; 
-    position: relative;
-}
-
-.artikkel.a3 {
-    background-image: url(img/js/js_stars.jpg);
-    box-shadow: 0 6px 8px rgb(22, 22, 22);
-    width: 340px;
-    height: 200px; 
-    margin: 20px; 
-    position: relative;
-}
+.artikkel.a1 { background-image: url(img/css/css_gradient.svg); }
+.artikkel.a2 { background-image: url(img/css/css_buttons3.png); }
+.artikkel.a3 { background-image: url(img/js/js_stars.jpg); }
 
 .artikkel p {
     width: 100%; 
@@ -64,16 +47,16 @@
     text-decoration: none; 
     text-align: center;
     color: white;  
-    visibility: hidden; 
     background-color: rgba(34, 34, 34, 0.658); 
     padding-top: 30px; 
     margin-left: 0;
+    opacity: 0;
 }
 
 .artikkel.a1:hover p,
 .artikkel.a2:hover p,
-.artikkel.a3:hover p      {
-    visibility: visible;       
+.artikkel.a3:hover p {
+    opacity: 1;       
 }
 
 .corner {
@@ -86,14 +69,6 @@
     border-width: 35px 35px 0 0;
 }
 
-.marker_html {
-    border-color: #ed612c transparent transparent transparent;
- }
-
-.marker_css {
-    border-color: #00adf6 transparent transparent transparent;
- }
-
-.marker_js {
-    border-color: #f0b24b transparent transparent transparent;
- }
+.marker_html { border-color: #ff672f transparent transparent transparent; }
+.marker_css { border-color: #06b4ff transparent transparent transparent; }
+.marker_js { border-color: #ffda00 transparent transparent transparent; }
