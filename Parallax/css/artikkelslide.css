@@ -32,9 +32,9 @@
     position: relative;
 }
 
-.artikkel.a1 { background-image: url(img/css/css_gradient.svg); }
-.artikkel.a2 { background-image: url(img/css/css_buttons3.png); }
-.artikkel.a3 { background-image: url(img/js/js_stars.jpg); }
+.artikkel.a1 { background-image: url(../img/css_gradient.svg); }
+.artikkel.a2 { background-image: url(../img/css_buttons3.png); }
+.artikkel.a3 { background-image: url(../img/js_stars.jpg); }
 
 .artikkel p {
     width: 100%; 
