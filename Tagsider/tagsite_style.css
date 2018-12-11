@@ -104,19 +104,19 @@ h1 {
 .information-box #html-text-marker {
     font-weight: 500;
     color: #ff5f1f;
-    text-shadow: 0 0 1px #ff5f1f;
+    text-shadow: 0 0 0.5px #ff5f1f;
 }
 
 .information-box #css-text-marker {
     font-weight: 500;
     color: #1b62fa;
-    text-shadow: 0 0 1px #1b62fa;
+    text-shadow: 0 0 0.5px #1b62fa;
 }
 
 .information-box #js-text-marker {
     font-weight: 500;
     color: #ffda00;
-    text-shadow: 0 0 1px #ffda00;
+    text-shadow: 0 0 0.5px #ffda00;
 }
 
 .tag-information h2 {

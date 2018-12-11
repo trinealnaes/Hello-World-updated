@@ -24,19 +24,60 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes AnimationName {
-    0% {
-        background-position: 50% 0%
-    }
-
-    50% {
-        background-position: 50% 100%
-    }
-
-    100% {
-        background-position: 50% 0%
-    }
+.code-color-elements {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    z-index: -100;
 }
+
+.code-color-elements .blue, .code-color-elements .yellow, .code-color-elements .orange {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    font-family: 'Inconsolata';
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+/* Blue elements */
+.code-color-elements .blue { background-color: #1b62fa; box-shadow: 0 0 3px #1b62fa;}
+.code-color-elements .blue:after { 
+    content: "<"; 
+    position: absolute;
+    top: -3px;    
+    left: 19px;
+}
+.blue.bl-one {  top: 220px; left: 7% }
+.blue.bl-two { top: 1300px; right: 20%; }
+.blue.bl-three { top: 2100px; left: 12%; }
+
+/* Yellow elements */
+.code-color-elements .yellow { background-color: #ffda00; box-shadow: 0 0 3px #ffda00; }
+.code-color-elements .yellow::after { 
+    content: "/"; 
+    position: absolute;
+    font-size: 20px;   
+    left: 20px;
+}
+.yellow.yel-one { top: 410px; right: 25%; }
+.yellow.yel-two { top: 1450px; left: 5%; }
+.yellow.yel-three { top: 2500px; right: 15%;}
+
+/* Orange elements */
+.code-color-elements .orange { background-color: #ff5f1f; box-shadow: 0 0 3px #ff5f1f;}
+.code-color-elements .orange:after { 
+    content: ">"; 
+    position: absolute;
+    top: -3px;    
+    left: 20px;
+}
+.orange.or-one { top: 800px; left: 25%; }
+.orange.or-two { top: 1900px; right: 25%; }
+.orange.or-three { top: 2800px; left: 18%;}
 
 /* PARALLAXING */
 /* h2 heading */
@@ -64,9 +105,7 @@ h1 {
 }
 
 /* marks what tag it belongs to */
-#heading_marker {
-    color: #06b4ff;
-}
+#heading_marker { color: #06b4ff; }
 
 .article-text {
     max-width: 600px;
@@ -74,13 +113,8 @@ h1 {
     text-align: left;
 }
 
-.parallax_right {
-    margin-left: 20%;
-}
-
-.parallax_right p {
-    margin-top: -250px;
-}
+.parallax_right { margin-left: 20%; }
+.parallax_right p { margin-top: -250px; }
 
 /* first paragraph container */
 .first {
@@ -148,13 +182,8 @@ pre {
 
 /* HTML tags, names, attr, class, number, string */
 /* CSS class, attributes */
-.html-tag {
-    color: rgb(100, 100, 100);
-}
-
-.html-name {
-    color: rgb(82, 170, 241);
-}
+.html-tag { color: rgb(100, 100, 100); }
+.html-name { color: rgb(82, 170, 241); }
 
 .html-attr,
 .css-selector-class,
@@ -167,14 +196,10 @@ pre {
     color: rgb(135, 184, 135);
 }
 
-.css-built_in {
-    color: rgb(205, 218, 134);
-}
+.css-built_in { color: rgb(205, 218, 134); }
 
 /* fourth paragraph container */
-.fourth {
-    height: 500px;
-}
+.fourth { height: 500px; }
 
 .fourth>p {
     transform: translateZ(0.25px) scale(0.75) translateY(10%);
@@ -190,6 +215,7 @@ pre {
 
 #author {
     margin-top: 150px;
+    text-align: left;
 }
 
 #lesmer {
@@ -206,51 +232,33 @@ pre {
 
 /* iPad width 768px */
 @media (max-width: 800px) {
-    #triangle-topright {
-        display: none;
-    }
+    #triangle-topright { display: none; }
 
-    #triangle-topleft {
-        display: none;
-    }
+    #triangle-topleft { display: none; }
 
-    #dark_triangle {
-        display: none;
-    }
+    #dark_triangle { display: none; }
 
-    .parallax_container>h1 {
-        margin-left: 10%;
-    }
+    .parallax_container>h1 { margin-left: 10%; }
 
-    h1 {
-        font-size: 25px;
-    }
+    h1 { font-size: 25px; }
 
-    p {
+    .article-text {
         margin-left: 0;
         max-width: 90%;
     }
 
-    .first {
-        height: 220px;
-    }
+    .first { height: 220px; }
 
-    .first p {
-        margin-top: 13%;
-    }
+    .first p { margin-top: 13%; }
 
-    .second {
-        margin-top: 0;
-    }
+    .second { margin-top: 0; }
 
     .parallax_left,
     .parallax_right {
         margin-left: 10%;
     }
 
-    .parallax_right p {
-        margin-top: 0;
-    }
+    .parallax_right p { margin-top: 0; }
 
     pre {
         margin: 0;
@@ -258,25 +266,19 @@ pre {
         text-align: left;
         max-width: 550px;
     }
+    #author { margin-left: 10%; }
 }
 
 @media (max-width: 375px) {
 
-    /* body { font-size: 12px; } */
-    .parallax_container {
-        margin-top: 150px;
-    }
+    .parallax_container { margin-top: 150px; }
 
-    .first>p {
-        transform: none;
-    }
+    .first>p { transform: none; }
 
     .second>h1,
     .second>p {
         transform: none;
     }
 
-    .fourth>p {
-        transform: none;
-    }
+    .fourth>p { transform: none; }
 }

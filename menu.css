@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -58,7 +56,6 @@ body {
 }
 
 .btn:hover { opacity: 0.8; }
-
 .btn.h:hover { width: 65px; } 
 .btn.c:hover { width: 50px; }
 .btn.j:hover { width: 117px; }
@@ -89,7 +86,7 @@ body {
         width: auto;
         height: 82px;
     }
-    .tag {
+    .nav-btns {
         top: 150px;
     }
 }
