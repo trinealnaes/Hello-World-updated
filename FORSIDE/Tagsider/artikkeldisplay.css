@@ -27,7 +27,7 @@
 .lesmer-artikler .stor { grid-row: span 3; }
 .lesmer-artikler .liten { grid-row: span 1; }
 
-.lesmer-artikler .stor:hover, .lesmer-artikler .liten:hover { opacity: 0.7; }
+.lesmer-artikler .stor:hover, .lesmer-artikler .liten:hover { opacity: 0.8; }
 
 .lesmer-artikler .stor .headline, .lesmer-artikler .liten .headline {
     width: 100%; 
@@ -54,6 +54,20 @@
 .html-art-fem { background-image: url("img/html/html-meta.jpg"); }
 .html-art-seks { background-image: url("img/html/html_link.png"); }
 
+.css-art-en { background-image: url("img/css/css-syntax2.png"); }
+.css-art-to {background-image: url("img/css/css-animation.jpeg"); }
+.css-art-tre { background-image: url("img/css/css-parallaxing.png"); }
+.css-art-fire { background-image: url("img/css/css-buttons.png"); }
+.css-art-fem { background-image: url("img/css/css_border.png"); }
+.css-art-seks { background-image: url("img/css/css_gradient.svg"); }
+
+.js-art-en { background-image: url("img/js/js_countdown.png"); }
+.js-art-to {background-image: url("img/js/js_js2.jpg"); }
+.js-art-tre { background-image: url("img/js/js_looping.png"); }
+.js-art-fire { background-image: url("img/js/js_slideshow.jpg"); }
+.js-art-fem { background-image: url("img/js/js_stars.jpg"); }
+.js-art-seks { background-image: url("img/js/js_toggle.jpg"); }
+
 .corner {
     width: 0;
     height: 0;
@@ -62,6 +76,6 @@
     border-width: 35px 35px 0 0;
 }
 
-.marker_html { border-color: #ed612c transparent transparent transparent; }
-.marker_css { border-color: #00adf6 transparent transparent transparent; }
-.marker_js { border-color: #f0b24b transparent transparent transparent; }
+.marker-html { border-color: #ed612c transparent transparent transparent; }
+.marker-css { border-color: #00adf6 transparent transparent transparent; }
+.marker-js { border-color: #f0b24b transparent transparent transparent; }

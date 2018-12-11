@@ -1,62 +1,58 @@
 .footer {
-    width: 100%;
-    margin-top: 300px;
-    /* height: 100px; 
-    position: relative; 
-    top: 300px; */
-    font-family: 'montserrat', sans-serif;
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 175px;
+
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0;
 
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.logo.liten {
-    left: -200px;
-    position: relative;
-}
-
-.logo.liten img {
+.footer-logo img {
     width: auto;
     height: 62px;
 }
 
-.icons img {
+.icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 350px;
+    height: auto;
+}
+
+.icons img, .some img {
     width: 25px;
     height: 25px;
-
-    display: block;
-    margin: 10px;
-    position: relative;
-    top: 30px;
-    left: -100px;
+    margin: auto auto;
 }
 
-.footer .icons p {
+.icons p {
     text-align: left;
     font-size: 14px;
-
-    margin: 25px;
-    position: relative;
-    top: -90px;
-    left: -50px;
 }
 
-.some img {
-    display: inline;
-    top: -145px;
-    left: 350px;
+.some {
+    width: 130px;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 
 @media (max-width: 768px) {
-    .logo.liten img {
+    .logo.logo-liten img {
         width: auto;
         height: 52px;
     }
 
-    .logo.liten {
+    .logo.logo-liten {
         left: -50px;
     }
 
@@ -79,7 +75,7 @@
 
 @media screen and (max-width:375px) {
 
-    .logo.liten {
+    .logo.logo-liten {
         left: -100px;
     }
 }

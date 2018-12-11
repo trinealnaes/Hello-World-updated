@@ -55,8 +55,8 @@ body {
 
 .btn.j {
     width: 112px;
-    border-bottom-color: #ffc64d;
-    filter: drop-shadow(0 0px 1px #ffc64d);
+    border-bottom-color: #ffda00;
+    filter: drop-shadow(0 0px 1px #ffda00);
 }
 
 .btn:hover { opacity: 0.8; }

@@ -158,27 +158,16 @@ body {
 }
 
 .btn.j {
-    border: 2px solid  #ffc64d; 
+    border: 2px solid  #ffda00; 
     margin: 0 auto;
     height: 30.5px; 
     width: 111px; 
-    box-shadow: 0 0 3px #ffc64d, inset 0 0 3px #ffc64d;
+    box-shadow: 0 0 3px #ffda00, inset 0 0 3px #ffda00;
 }
 
-.btn.h:hover{
-    /* background-color: #ed612c;*/
-    background-color: #ff672f;
-}
-
-.btn.c:hover{
-    /*background-color: #00adf6;*/
-    background-color: #06b4ff;
-}
-
-.btn.j:hover{
-    /* background-color: #f0b24b;*/
-    background-color: #ffc64d;
-}
+.btn.h:hover{ background-color: #ff672f; }
+.btn.c:hover{ background-color: #06b4ff; }
+.btn.j:hover{ background-color: #ffda00; }
 
 /* Artikkler */
 .artikkel-wrapper {
@@ -194,9 +183,7 @@ body {
     grid-gap: 45px;    
 }
 
-.artikkel-wrapper a {
-    text-decoration: none; 
-}
+.artikkel-wrapper a { text-decoration: none; }
 
 .stor, .middels, .liten { 
     min-height: 250px; 
@@ -210,7 +197,7 @@ body {
 .middels { grid-row: span 2; }
 .liten { grid-row: span 1; }
 
-.stor:hover, .middels:hover, .liten:hover { opacity: 0.7; }
+.stor:hover, .middels:hover, .liten:hover { opacity: 0.8; }
 
 .stor .headline, .middels .headline, .liten .headline {
     width: 100%; 
@@ -250,9 +237,9 @@ body {
     border-width: 35px 35px 0 0;
 }
 
-.marker_html { border-color: #ed612c transparent transparent transparent; }
-.marker_css { border-color: #00adf6 transparent transparent transparent; }
-.marker_js { border-color: #f0b24b transparent transparent transparent; }
+.marker_html { border-color: #ff5f1f transparent transparent transparent; }
+.marker_css { border-color: #1b62fa transparent transparent transparent; }
+.marker_js { border-color: #ffda00 transparent transparent transparent; }
 
 /* Repsonsiv */
 @media screen and (max-width: 1200px) {
