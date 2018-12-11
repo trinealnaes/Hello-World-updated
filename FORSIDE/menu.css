@@ -6,36 +6,39 @@ body {
     letter-spacing: 1px;
     font-weight: 300;
     margin: 0;
+    font-size: 16px;
 }
 
-/* menu */
-.tag {
+/* menubuttons */
+.nav-btns {
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    top: 50px;
+
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-
-    position: relative;
-    top: 50px;
 }
 
-.tag a {
+.nav-btns a {
     text-decoration: none;
     color: white;
 }
 
-
-/* Btn til tags */
-
+/* Btn til tagsider */
 .btn {
     height: 30px;
     padding: 0;
     margin: 20px;
     border-bottom: 2px solid;
     text-align: center;
+    transition: all .25s ease;
 }
 
 .btn.h {
@@ -51,14 +54,16 @@ body {
 }
 
 .btn.j {
-    width: 100px;
+    width: 112px;
     border-bottom-color: #ffc64d;
     filter: drop-shadow(0 0px 1px #ffc64d);
 }
 
-.btn:hover {
-    opacity: 0.8;
-}
+.btn:hover { opacity: 0.8; }
+
+.btn.h:hover { width: 65px; } 
+.btn.c:hover { width: 50px; }
+.btn.j:hover { width: 117px; }
 
 
 @media screen and (max-width:768px) {

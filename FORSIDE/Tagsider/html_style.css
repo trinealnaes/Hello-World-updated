@@ -1,19 +1,13 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(-35deg, rgb(10, 10, 10), rgb(25, 25, 25), rgb(10, 10, 10));
-    /* background-color: rgb(34, 34, 34); */
-    line-height: 1.6em;
     color: white;
-    font-family: 'Inconsolata', monospace;
+    font-size: 16px; 
+    line-height: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body > main {
@@ -24,6 +18,7 @@ body > main {
 
 /* Heading on side */
 .heading {
+    width: 330px;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -33,6 +28,8 @@ body > main {
 
 h1 {
     font-size: 3.25rem;
+    /* font-family: 'Inconsolata', monospace; */
+    font-weight: 700; 
     z-index: 1;
     left: 50px;
     margin-left: 120px;
@@ -53,7 +50,7 @@ h1 {
     transition: 0.5s;
 }
 
-.heading:hover .html_header_marker {
+.heading:hover .html_header_marker{
     transform: scale(1.1);
     transform: skew(25deg);
     border-radius: 0 6px 10px 0;
@@ -111,71 +108,4 @@ h1 {
     border-bottom: 2px solid white;
     margin-left: 75px;
     margin-right: 75px;
-}
-
-/* Articles */
-.lesmer main {
-    max-width: 850px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 9rem;
-    grid-row-gap: 9rem;
-}
-
-.lesmer article {
-    background: 0;
-    height: 340px;
-    transition: 0.5s;
-    opacity: 0.5;
-}
-
-.lesmer article:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 8px 8px rgb(15, 15, 15);
-    opacity: 1;
-}
-
-.lesmer img {
-    width: 100%;
-    display: block;
-    text-align: center;
-    box-shadow: 0 6px 8px rgb(22, 22, 22);
-}
-
-.lesmer img:hover {
-    box-shadow: none;
-}
-
-.lesmer h3 {
-    color: white;
-    font-weight: 400;
-    padding: 1rem;
-
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -16px;
-
-    visibility: hidden;
-}
-
-article:hover h3 {
-    visibility: visible;
-}
-
-.lesmer a {
-    text-decoration: none;
-    color: black;
-}
-
-.lesmer a .corner_marker {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 35px 35px 0 0;
-    border-color: #ff672f transparent transparent transparent;
 }

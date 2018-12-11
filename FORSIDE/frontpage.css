@@ -1,25 +1,15 @@
-* {
-    box-sizing: border-box; 
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
+    padding: 0;
     background-image: linear-gradient(-35deg, rgb(10, 10, 10), rgb(30, 28, 30), rgb(10, 10, 10));
-    /* background-color: papayawhip; */
     background-size: 100% 3500px;
     background-repeat: no-repeat;
     color: white; 
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px; 
-}
-
-.wrapper {
-    width: 100%; 
-    height: auto;  
-    margin: 0 auto; 
-    text-align: center; 
-    position: relative;
-    top: 700px; 
+    line-height: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Slideshow container */
@@ -27,20 +17,20 @@ body {
     max-width: 100%;
     height: 600px;
     overflow: hidden;
-    
+
     position: relative;
     margin: 0 auto;
     z-index: 1;
-  }
-  
-  .slideshow-container img { width: 100%; height: auto; }
-  .slideshow-container #productivity { margin-top: -65px; }
-  .slideshow-container #prototyping { width:110%; margin-left: -80px; }
-  .slideshow-container #teamwork { margin-top: -250px; }
-  .slideshow-container #homeoffice { margin-top: -100px; }
-  .mySlides { display: none; }
+}
 
-  .text {
+.slideshow-container img { width: 100%; height: auto; }
+.slideshow-container #productivity { margin-top: -65px; }
+.slideshow-container #prototyping { width:110%; margin-left: -80px; }
+.slideshow-container #teamwork { margin-top: -250px; }
+.slideshow-container #homeoffice { margin-top: -100px; }
+.mySlides { display: none; }
+
+.text {
     background-color: rgba(34, 34, 34, 0.452); 
     position: absolute;
     bottom: 0;
@@ -54,9 +44,14 @@ body {
     font-family: 'Inconsolata', monospace; 
     font-weight: 700;
     letter-spacing: 0.5px; 
-  }
+}
 
-  .dot {
+#slideshow-dots {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.dot {
     cursor: pointer;
     height: 12px;
     width: 12px;
@@ -65,34 +60,44 @@ body {
     border-radius: 50%;
     display: inline-block;
     transition: 0.3s ease;
-  }
-  /* .active,  */
-  .dot:hover{ background-color: #f0b24b; }
-  
-  .fade {
+}
+/* .active,  */
+.dot:hover{ background-color: #f0b24b; }
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {
-        opacity: .4
-    } 
-    to {
-        opacity: 1
-    }
-  }
-  
-  @keyframes fade {
-    from {
-        opacity: .4
-    } 
-    to {
-        opacity: 1
-    }
-  }
+}
 
-  /* Tags */
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+/* Wrapper rundt sideinnhold */
+.wrapper {
+    width: 100%; 
+    height: auto;  
+    margin: 0 auto; 
+    text-align: center; 
+    position: relative;
+    top: 700px; 
+}
+
+/* Tags */
 .code-display {
     margin: 0 auto; 
     margin-top: -60px;
@@ -110,8 +115,8 @@ body {
 
 .display-html, .display-css, .display-js {
     background-size: cover;
-    width: 270px;
-    height: 180px;
+    width: 260px;
+    height: 170px;
 }
 
 .display-html { background-image: url("images/display-html.png"); background-position: center left; }
@@ -130,12 +135,11 @@ body {
     justify-content: space-evenly;
 }
 
-/* Btn til ani-boxes */
+/* Btn til display-boxes */
 .btn {
     width: 110px; 
     height: 30px; 
     border-radius: 8px; 
-    padding: 5px; 
     margin-top: 20px; 
 
     transition: all .3s ease;
@@ -177,12 +181,13 @@ body {
 }
 
 /* Artikkler */
-
 .artikkel-wrapper {
     width: 80%;
     position: relative;
     margin: 0 auto;
     margin-top: 230px; 
+
+    font-family: 'Inconsolata', monospace;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -234,7 +239,7 @@ body {
 .art-åtte { background-image: url("images/css-parallaxing.png"); }
 .art-ni { background-image: url("images/html-lar.jpg"); }
 .art-ti { background-image: url("images/css-box-sizing.png"); }
-.art-ellve { background-image: url("images/jquery.jpg"); }
+.art-elleve { background-image: url("images/jquery.jpg"); }
 .art-tolv { background-image: url("images/css-animation.jpeg"); }
 
 .corner {
@@ -245,20 +250,11 @@ body {
     border-width: 35px 35px 0 0;
 }
 
-.marker_html {
-    border-color: #ed612c transparent transparent transparent;
- }
-
-.marker_css {
-    border-color: #00adf6 transparent transparent transparent;
- }
-
-.marker_js {
-    border-color: #f0b24b transparent transparent transparent;
- }
+.marker_html { border-color: #ed612c transparent transparent transparent; }
+.marker_css { border-color: #00adf6 transparent transparent transparent; }
+.marker_js { border-color: #f0b24b transparent transparent transparent; }
 
 /* Repsonsiv */
-
 @media screen and (max-width: 1200px) {
     .artikkel-wrapper {  
         margin: 1% 0 1% 0%;
@@ -273,7 +269,7 @@ body {
     .art-åtte,
     .art-ni,
     .art-ti,
-    .art-ellve,
+    .art-elleve,
     .art-tolv {
         width: 300px;
         height: 400px;

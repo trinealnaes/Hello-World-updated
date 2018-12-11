@@ -1,0 +1,67 @@
+/* Artikler - til alle tag-sidene (html, css, js) */
+.lesmer-artikler {
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-family: 'Inconsolata', monospace;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px 90px;   
+}
+
+.lesmer-artikler a {
+    text-decoration: none; 
+}
+
+.lesmer-artikler .stor, .lesmer-artikler .liten { 
+    min-height: 250px; 
+    max-height: 500px;
+    box-shadow: 0 3px 12px rgb(0, 0, 0);  
+    background-size: cover;
+    background-position: center center; 
+    opacity: 1;
+}
+
+.lesmer-artikler .stor { grid-row: span 3; }
+.lesmer-artikler .liten { grid-row: span 1; }
+
+.lesmer-artikler .stor:hover, .lesmer-artikler .liten:hover { opacity: 0.7; }
+
+.lesmer-artikler .stor .headline, .lesmer-artikler .liten .headline {
+    width: 100%; 
+    height: 100px; 
+    margin-top: 50px;
+    padding-top: 40px; 
+    text-align: center;
+
+    color: white;  
+    background-color: rgba(34, 34, 34, 0.658); 
+
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.lesmer-artikler .stor:hover .headline, .lesmer-artikler .liten:hover .headline {
+    opacity: 1;
+}
+
+.html-art-en { background-image: url("img/html/html_syntax_pankaj-patel.jpg"); }
+.html-art-to {background-image: url("img/html/html-tags.png"); }
+.html-art-tre { background-image: url("img/html/html-table.png"); }
+.html-art-fire { background-image: url("img/html/login-form.jpg"); }
+.html-art-fem { background-image: url("img/html/html-meta.jpg"); }
+.html-art-seks { background-image: url("img/html/html_link.png"); }
+
+.corner {
+    width: 0;
+    height: 0;
+    z-index: 1000;
+    border-style: solid;
+    border-width: 35px 35px 0 0;
+}
+
+.marker_html { border-color: #ed612c transparent transparent transparent; }
+.marker_css { border-color: #00adf6 transparent transparent transparent; }
+.marker_js { border-color: #f0b24b transparent transparent transparent; }
